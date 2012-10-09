@@ -1,0 +1,177 @@
+# $Id$
+#
+# LANGUAGE translation of Drupal (general)
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+# Generated from files:
+#  vih_dashboard.views_default.inc: n/a
+#  vih_dashboard.info: n/a
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2012-10-09 13:33+0200\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+
+#: vih_dashboard.views_default.inc:130;291;497
+msgid "Master"
+msgstr ""
+
+#: vih_dashboard.views_default.inc:131;292;498
+msgid "mere"
+msgstr ""
+
+#: vih_dashboard.views_default.inc:132;293;499
+msgid "Udfør"
+msgstr ""
+
+#: vih_dashboard.views_default.inc:133;294;500
+msgid "Gendan"
+msgstr ""
+
+#: vih_dashboard.views_default.inc:134;295;501
+msgid "Sortér efter"
+msgstr ""
+
+#: vih_dashboard.views_default.inc:135;296;502
+msgid "Stigende"
+msgstr ""
+
+#: vih_dashboard.views_default.inc:136;297;503
+msgid "Faldende"
+msgstr ""
+
+#: vih_dashboard.views_default.inc:137;298
+msgid "Antal elementer"
+msgstr ""
+
+#: vih_dashboard.views_default.inc:138;299;505
+msgid "- Alle -"
+msgstr ""
+
+#: vih_dashboard.views_default.inc:139;300;506
+msgid "Forskydning"
+msgstr ""
+
+#: vih_dashboard.views_default.inc:140;301;507
+msgid "« første"
+msgstr ""
+
+#: vih_dashboard.views_default.inc:141;302;508
+msgid "‹ forrige"
+msgstr ""
+
+#: vih_dashboard.views_default.inc:142;303;509
+msgid "næste ›"
+msgstr ""
+
+#: vih_dashboard.views_default.inc:143;304;510
+msgid "sidste »"
+msgstr ""
+
+#: vih_dashboard.views_default.inc:144;306
+msgid "Type"
+msgstr ""
+
+#: vih_dashboard.views_default.inc:145;307
+msgid "Forfatter uid"
+msgstr ""
+
+#: vih_dashboard.views_default.inc:146
+msgid "Opdateringsdato"
+msgstr ""
+
+#: vih_dashboard.views_default.inc:147;311
+msgid "Content pane"
+msgstr ""
+
+#: vih_dashboard.views_default.inc:148;313
+msgid "Alle"
+msgstr ""
+
+#: vih_dashboard.views_default.inc:149;314
+msgid "View panes"
+msgstr ""
+
+#: vih_dashboard.views_default.inc:150;315
+msgid "Content pane 2"
+msgstr ""
+
+#: vih_dashboard.views_default.inc:305
+msgid "Titel"
+msgstr ""
+
+#: vih_dashboard.views_default.inc:308
+msgid "Udgivet"
+msgstr ""
+
+#: vih_dashboard.views_default.inc:309
+msgid "Udgiv den"
+msgstr ""
+
+#: vih_dashboard.views_default.inc:310
+msgid "Ikke planlagt"
+msgstr ""
+
+#: vih_dashboard.views_default.inc:312
+msgid "Du har indhold, der ikke er udgivet"
+msgstr ""
+
+#: vih_dashboard.views_default.inc:316
+msgid "Der er indhold i systemet, der ikke er udgivet"
+msgstr ""
+
+#: vih_dashboard.views_default.inc:504
+msgid "Elementer pr. side"
+msgstr ""
+
+#: vih_dashboard.views_default.inc:511
+msgid "Navn"
+msgstr ""
+
+#: vih_dashboard.views_default.inc:512
+msgid "Antal"
+msgstr ""
+
+#: vih_dashboard.views_default.inc:513
+msgid "Kategori"
+msgstr ""
+
+#: vih_dashboard.views_default.inc:514
+msgid "E-mails"
+msgstr ""
+
+#: vih_dashboard.views_default.inc:515
+msgid "Tabel"
+msgstr ""
+
+#: vih_dashboard.views_default.inc:516
+msgid "Kategori (field_webform_category)"
+msgstr ""
+
+#: vih_dashboard.views_default.inc:517
+msgid "Side"
+msgstr ""
+
+#: vih_dashboard.views_default.inc:518
+msgid "Webformularer"
+msgstr ""
+
+#: vih_dashboard.info:0
+msgid "VIH Dashboard"
+msgstr ""
+
+#: vih_dashboard.info:0
+msgid "Dashboard for administrator"
+msgstr ""
+
+#: vih_dashboard.info:0
+msgid "VIH"
+msgstr ""
+
