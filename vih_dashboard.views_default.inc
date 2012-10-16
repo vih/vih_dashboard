@@ -13,7 +13,7 @@ function vih_dashboard_views_default_views() {
   $view = new view();
   $view->name = 'vih_stale_content';
   $view->description = '';
-  $view->tag = 'default';
+  $view->tag = 'VIH';
   $view->base_table = 'node';
   $view->human_name = 'VIH Stale Content';
   $view->core = 7;
@@ -154,7 +154,7 @@ function vih_dashboard_views_default_views() {
   $view = new view();
   $view->name = 'vih_unpublished_content';
   $view->description = '';
-  $view->tag = 'default';
+  $view->tag = 'VIH';
   $view->base_table = 'node';
   $view->human_name = 'VIH Unpublished Content';
   $view->core = 7;
@@ -167,7 +167,7 @@ function vih_dashboard_views_default_views() {
   $handler->display->display_options['use_more_always'] = FALSE;
   $handler->display->display_options['use_more_text'] = 'mere';
   $handler->display->display_options['access']['type'] = 'perm';
-  $handler->display->display_options['access']['perm'] = 'administer nodes';
+  $handler->display->display_options['access']['perm'] = 'view own unpublished content';
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
@@ -248,10 +248,45 @@ function vih_dashboard_views_default_views() {
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Du har indhold, der ikke er udgivet';
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['defaults']['cache'] = FALSE;
+  $handler->display->display_options['cache']['type'] = 'time';
+  $handler->display->display_options['cache']['results_lifespan'] = '300';
+  $handler->display->display_options['cache']['results_lifespan_custom'] = '0';
+  $handler->display->display_options['cache']['output_lifespan'] = '300';
+  $handler->display->display_options['cache']['output_lifespan_custom'] = '0';
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '5';
   $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Felt: Indhold: Titel */
+  $handler->display->display_options['fields']['title']['id'] = 'title';
+  $handler->display->display_options['fields']['title']['table'] = 'node';
+  $handler->display->display_options['fields']['title']['field'] = 'title';
+  $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
+  $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
+  /* Felt: Indhold: Type */
+  $handler->display->display_options['fields']['type']['id'] = 'type';
+  $handler->display->display_options['fields']['type']['table'] = 'node';
+  $handler->display->display_options['fields']['type']['field'] = 'type';
+  /* Felt: iToggle: Indholdselement Status */
+  $handler->display->display_options['fields']['itoggle-node-status']['id'] = 'itoggle-node-status';
+  $handler->display->display_options['fields']['itoggle-node-status']['table'] = 'node';
+  $handler->display->display_options['fields']['itoggle-node-status']['field'] = 'itoggle-node-status';
+  $handler->display->display_options['fields']['itoggle-node-status']['label'] = 'Udgivet';
+  $handler->display->display_options['fields']['itoggle-node-status']['itoggle_display_type'] = '1';
+  /* Felt: Planlægning: Udgiv den */
+  $handler->display->display_options['fields']['publish_on']['id'] = 'publish_on';
+  $handler->display->display_options['fields']['publish_on']['table'] = 'scheduler';
+  $handler->display->display_options['fields']['publish_on']['field'] = 'publish_on';
+  $handler->display->display_options['fields']['publish_on']['empty'] = 'Ikke planlagt';
+  $handler->display->display_options['fields']['publish_on']['date_format'] = 'short';
+  /* Felt: Indhold: Redigér-link */
+  $handler->display->display_options['fields']['edit_node']['id'] = 'edit_node';
+  $handler->display->display_options['fields']['edit_node']['table'] = 'views_entity_node';
+  $handler->display->display_options['fields']['edit_node']['field'] = 'edit_node';
+  $handler->display->display_options['fields']['edit_node']['label'] = '';
+  $handler->display->display_options['fields']['edit_node']['element_label_colon'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Kontekstuelt filter: Indhold: Forfatter uid */
   $handler->display->display_options['arguments']['uid']['id'] = 'uid';

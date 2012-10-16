@@ -16,7 +16,6 @@ dependencies[] = vih_facilities
 dependencies[] = vih_golf_courses
 dependencies[] = vih_lectures
 dependencies[] = vih_long_course
-dependencies[] = vih_middleman_redirect
 dependencies[] = vih_oneliners
 dependencies[] = vih_pages
 dependencies[] = vih_short_course
