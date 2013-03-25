@@ -96,7 +96,6 @@ function vih_dashboard_views_default_views() {
 
   /* Display: Content pane */
   $handler = $view->new_display('panel_pane', 'Content pane', 'panel_pane_1');
-  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Kontekstuelt filter: Indhold: Forfatter uid */
   $handler->display->display_options['arguments']['uid']['id'] = 'uid';
@@ -111,7 +110,6 @@ function vih_dashboard_views_default_views() {
 
   /* Display: Content pane 2 */
   $handler = $view->new_display('panel_pane', 'Content pane 2', 'panel_pane_2');
-  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Kontekstuelt filter: Indhold: Forfatter uid */
   $handler->display->display_options['arguments']['uid']['id'] = 'uid';
@@ -247,7 +245,6 @@ function vih_dashboard_views_default_views() {
   $handler = $view->new_display('panel_pane', 'Content pane', 'panel_pane_1');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Du har indhold, der ikke er udgivet';
-  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['cache'] = FALSE;
   $handler->display->display_options['cache']['type'] = 'time';
   $handler->display->display_options['cache']['results_lifespan'] = '300';
@@ -303,7 +300,6 @@ function vih_dashboard_views_default_views() {
   $handler = $view->new_display('panel_pane', 'Content pane 2', 'panel_pane_2');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Der er indhold i systemet, der ikke er udgivet';
-  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['pager'] = FALSE;
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '5';
@@ -492,7 +488,6 @@ function vih_dashboard_views_default_views() {
   $handler = $view->new_display('page', 'Side', 'page_1');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Webformularer';
-  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['filter_groups'] = FALSE;
   $handler->display->display_options['defaults']['filters'] = FALSE;
   /* Filterkriterie: Indhold: Udgivet */
