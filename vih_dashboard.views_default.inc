@@ -210,12 +210,11 @@ function vih_dashboard_views_default_views() {
   $handler->display->display_options['fields']['uid']['id'] = 'uid';
   $handler->display->display_options['fields']['uid']['table'] = 'node';
   $handler->display->display_options['fields']['uid']['field'] = 'uid';
-  /* Felt: iToggle: Indholdselement Status */
+  /* Felt: Handler mangler eller er i stykker */
   $handler->display->display_options['fields']['itoggle-node-status']['id'] = 'itoggle-node-status';
   $handler->display->display_options['fields']['itoggle-node-status']['table'] = 'node';
   $handler->display->display_options['fields']['itoggle-node-status']['field'] = 'itoggle-node-status';
   $handler->display->display_options['fields']['itoggle-node-status']['label'] = 'Udgivet';
-  $handler->display->display_options['fields']['itoggle-node-status']['itoggle_display_type'] = '1';
   /* Felt: Planlægning: Udgiv den */
   $handler->display->display_options['fields']['publish_on']['id'] = 'publish_on';
   $handler->display->display_options['fields']['publish_on']['table'] = 'scheduler';
@@ -266,12 +265,12 @@ function vih_dashboard_views_default_views() {
   $handler->display->display_options['fields']['type']['id'] = 'type';
   $handler->display->display_options['fields']['type']['table'] = 'node';
   $handler->display->display_options['fields']['type']['field'] = 'type';
-  /* Felt: iToggle: Indholdselement Status */
-  $handler->display->display_options['fields']['itoggle-node-status']['id'] = 'itoggle-node-status';
-  $handler->display->display_options['fields']['itoggle-node-status']['table'] = 'node';
-  $handler->display->display_options['fields']['itoggle-node-status']['field'] = 'itoggle-node-status';
-  $handler->display->display_options['fields']['itoggle-node-status']['label'] = 'Udgivet';
-  $handler->display->display_options['fields']['itoggle-node-status']['itoggle_display_type'] = '1';
+  /* Felt: Indhold: Udgivet */
+  $handler->display->display_options['fields']['status']['id'] = 'status';
+  $handler->display->display_options['fields']['status']['table'] = 'node';
+  $handler->display->display_options['fields']['status']['field'] = 'status';
+  $handler->display->display_options['fields']['status']['type'] = 'unicode-yes-no';
+  $handler->display->display_options['fields']['status']['not'] = 0;
   /* Felt: Planlægning: Udgiv den */
   $handler->display->display_options['fields']['publish_on']['id'] = 'publish_on';
   $handler->display->display_options['fields']['publish_on']['table'] = 'scheduler';
@@ -295,6 +294,21 @@ function vih_dashboard_views_default_views() {
   $handler->display->display_options['arguments']['uid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['uid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['uid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['defaults']['filter_groups'] = FALSE;
+  $handler->display->display_options['defaults']['filters'] = FALSE;
+  /* Filterkriterie: Indhold: Udgivet */
+  $handler->display->display_options['filters']['status']['id'] = 'status';
+  $handler->display->display_options['filters']['status']['table'] = 'node';
+  $handler->display->display_options['filters']['status']['field'] = 'status';
+  $handler->display->display_options['filters']['status']['value'] = '0';
+  $handler->display->display_options['filters']['status']['group'] = 1;
+  $handler->display->display_options['filters']['status']['expose']['operator'] = FALSE;
+  /* Filterkriterie: Indhold: Opdateringsdato */
+  $handler->display->display_options['filters']['changed']['id'] = 'changed';
+  $handler->display->display_options['filters']['changed']['table'] = 'node';
+  $handler->display->display_options['filters']['changed']['field'] = 'changed';
+  $handler->display->display_options['filters']['changed']['operator'] = '>=';
+  $handler->display->display_options['filters']['changed']['value']['value'] = '-2 months';
 
   /* Display: Content pane 2 */
   $handler = $view->new_display('panel_pane', 'Content pane 2', 'panel_pane_2');
@@ -318,6 +332,19 @@ function vih_dashboard_views_default_views() {
   $handler->display->display_options['arguments']['uid']['specify_validation'] = TRUE;
   $handler->display->display_options['arguments']['uid']['validate']['type'] = 'user';
   $handler->display->display_options['arguments']['uid']['not'] = TRUE;
+
+  /* Display: Side */
+  $handler = $view->new_display('page', 'Side', 'page_1');
+  $handler->display->display_options['defaults']['title'] = FALSE;
+  $handler->display->display_options['title'] = 'Upubliceret indhold';
+  $handler->display->display_options['path'] = 'admin/dashboard/pages/unpublished';
+  $handler->display->display_options['menu']['type'] = 'default tab';
+  $handler->display->display_options['menu']['title'] = 'Upubliceret indhold';
+  $handler->display->display_options['menu']['weight'] = '0';
+  $handler->display->display_options['menu']['context'] = 0;
+  $handler->display->display_options['menu']['context_only_inline'] = 0;
+  $handler->display->display_options['tab_options']['title'] = 'Upubliceret';
+  $handler->display->display_options['tab_options']['weight'] = '0';
   $translatables['vih_unpublished_content'] = array(
     t('Master'),
     t('mere'),
@@ -345,6 +372,8 @@ function vih_dashboard_views_default_views() {
     t('View panes'),
     t('Content pane 2'),
     t('Der er indhold i systemet, der ikke er udgivet'),
+    t('Side'),
+    t('Upubliceret indhold'),
   );
   $export['vih_unpublished_content'] = $view;
 
