@@ -2,7 +2,6 @@ name = VIH Dashboard
 description = Dashboard for administrator
 core = 7.x
 package = VIH
-php = 5.2.4
 version = 7.x-0.6
 project = vih_dashboard
 dependencies[] = ctools
