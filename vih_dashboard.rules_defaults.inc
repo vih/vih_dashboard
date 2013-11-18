@@ -14,7 +14,7 @@ function vih_dashboard_default_rules_configuration() {
       "PLUGIN" : "reaction rule",
       "TAGS" : [ "user" ],
       "REQUIRES" : [ "rules", "rules_scheduler" ],
-      "ON" : [ "user_login" ],
+      "ON" : { "user_login" : [] },
       "IF" : [
         { "user_has_role" : { "account" : [ "account" ], "roles" : { "value" : { "5" : "5" } } } }
       ],
@@ -34,7 +34,7 @@ function vih_dashboard_default_rules_configuration() {
       "PLUGIN" : "reaction rule",
       "TAGS" : [ "user" ],
       "REQUIRES" : [ "rules" ],
-      "ON" : [ "user_login" ],
+      "ON" : { "user_login" : [] },
       "IF" : [
         { "user_has_role" : {
             "account" : [ "account" ],

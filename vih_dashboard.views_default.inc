@@ -107,6 +107,8 @@ function vih_dashboard_views_default_views() {
   $handler->display->display_options['arguments']['uid']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['uid']['summary']['format'] = 'default_summary';
   $handler->display->display_options['arguments']['uid']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['pane_category']['name'] = 'VIH Admin';
+  $handler->display->display_options['pane_category']['weight'] = '0';
 
   /* Display: Content pane 2 */
   $handler = $view->new_display('panel_pane', 'Content pane 2', 'panel_pane_2');
@@ -124,6 +126,8 @@ function vih_dashboard_views_default_views() {
   $handler->display->display_options['arguments']['uid']['specify_validation'] = TRUE;
   $handler->display->display_options['arguments']['uid']['validate']['type'] = 'user';
   $handler->display->display_options['arguments']['uid']['not'] = TRUE;
+  $handler->display->display_options['pane_category']['name'] = 'VIH Admin';
+  $handler->display->display_options['pane_category']['weight'] = '0';
   $translatables['vih_stale_content'] = array(
     t('Master'),
     t('mere'),
@@ -144,7 +148,7 @@ function vih_dashboard_views_default_views() {
     t('Opdateringsdato'),
     t('Content pane'),
     t('Alle'),
-    t('View panes'),
+    t('VIH Admin'),
     t('Content pane 2'),
   );
   $export['vih_stale_content'] = $view;
@@ -309,6 +313,8 @@ function vih_dashboard_views_default_views() {
   $handler->display->display_options['filters']['changed']['field'] = 'changed';
   $handler->display->display_options['filters']['changed']['operator'] = '>=';
   $handler->display->display_options['filters']['changed']['value']['value'] = '-2 months';
+  $handler->display->display_options['pane_category']['name'] = 'VIH Admin';
+  $handler->display->display_options['pane_category']['weight'] = '0';
 
   /* Display: Content pane 2 */
   $handler = $view->new_display('panel_pane', 'Content pane 2', 'panel_pane_2');
@@ -332,6 +338,8 @@ function vih_dashboard_views_default_views() {
   $handler->display->display_options['arguments']['uid']['specify_validation'] = TRUE;
   $handler->display->display_options['arguments']['uid']['validate']['type'] = 'user';
   $handler->display->display_options['arguments']['uid']['not'] = TRUE;
+  $handler->display->display_options['pane_category']['name'] = 'VIH Admin';
+  $handler->display->display_options['pane_category']['weight'] = '0';
 
   /* Display: Side */
   $handler = $view->new_display('page', 'Side', 'page_1');
@@ -369,7 +377,7 @@ function vih_dashboard_views_default_views() {
     t('Content pane'),
     t('Du har indhold, der ikke er udgivet'),
     t('Alle'),
-    t('View panes'),
+    t('VIH Admin'),
     t('Content pane 2'),
     t('Der er indhold i systemet, der ikke er udgivet'),
     t('Side'),
@@ -402,9 +410,10 @@ function vih_dashboard_views_default_views() {
   $handler->display->display_options['exposed_form']['options']['sort_asc_label'] = 'Stigende';
   $handler->display->display_options['exposed_form']['options']['sort_desc_label'] = 'Faldende';
   $handler->display->display_options['pager']['type'] = 'full';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '30';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '50';
   $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['pager']['options']['id'] = '0';
+  $handler->display->display_options['pager']['options']['quantity'] = '9';
   $handler->display->display_options['pager']['options']['expose']['items_per_page_label'] = 'Elementer pr. side';
   $handler->display->display_options['pager']['options']['expose']['items_per_page_options_all_label'] = '- Alle -';
   $handler->display->display_options['pager']['options']['expose']['offset_label'] = 'Forskydning';
@@ -485,6 +494,11 @@ function vih_dashboard_views_default_views() {
   $handler->display->display_options['fields']['delete_node']['field'] = 'delete_node';
   $handler->display->display_options['fields']['delete_node']['label'] = '';
   $handler->display->display_options['fields']['delete_node']['element_label_colon'] = FALSE;
+  /* Sorteringskriterie: Indhold: Oprettelsesdato */
+  $handler->display->display_options['sorts']['created']['id'] = 'created';
+  $handler->display->display_options['sorts']['created']['table'] = 'node';
+  $handler->display->display_options['sorts']['created']['field'] = 'created';
+  $handler->display->display_options['sorts']['created']['order'] = 'DESC';
   /* Filterkriterie: Indhold: Udgivet */
   $handler->display->display_options['filters']['status']['id'] = 'status';
   $handler->display->display_options['filters']['status']['table'] = 'node';
