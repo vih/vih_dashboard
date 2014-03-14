@@ -214,11 +214,6 @@ function vih_dashboard_views_default_views() {
   $handler->display->display_options['fields']['uid']['id'] = 'uid';
   $handler->display->display_options['fields']['uid']['table'] = 'node';
   $handler->display->display_options['fields']['uid']['field'] = 'uid';
-  /* Felt: Handler mangler eller er i stykker */
-  $handler->display->display_options['fields']['itoggle-node-status']['id'] = 'itoggle-node-status';
-  $handler->display->display_options['fields']['itoggle-node-status']['table'] = 'node';
-  $handler->display->display_options['fields']['itoggle-node-status']['field'] = 'itoggle-node-status';
-  $handler->display->display_options['fields']['itoggle-node-status']['label'] = 'Udgivet';
   /* Felt: Planlægning: Udgiv den */
   $handler->display->display_options['fields']['publish_on']['id'] = 'publish_on';
   $handler->display->display_options['fields']['publish_on']['table'] = 'scheduler';
@@ -313,6 +308,11 @@ function vih_dashboard_views_default_views() {
   $handler->display->display_options['filters']['changed']['field'] = 'changed';
   $handler->display->display_options['filters']['changed']['operator'] = '>=';
   $handler->display->display_options['filters']['changed']['value']['value'] = '-2 months';
+  /* Filterkriterie: Planlægning: Udgiv den */
+  $handler->display->display_options['filters']['publish_on']['id'] = 'publish_on';
+  $handler->display->display_options['filters']['publish_on']['table'] = 'scheduler';
+  $handler->display->display_options['filters']['publish_on']['field'] = 'publish_on';
+  $handler->display->display_options['filters']['publish_on']['operator'] = 'not empty';
   $handler->display->display_options['pane_category']['name'] = 'VIH Admin';
   $handler->display->display_options['pane_category']['weight'] = '0';
 
@@ -345,10 +345,11 @@ function vih_dashboard_views_default_views() {
   $handler = $view->new_display('page', 'Side', 'page_1');
   $handler->display->display_options['defaults']['title'] = FALSE;
   $handler->display->display_options['title'] = 'Upubliceret indhold';
-  $handler->display->display_options['path'] = 'admin/dashboard/pages/unpublished';
-  $handler->display->display_options['menu']['type'] = 'default tab';
+  $handler->display->display_options['path'] = 'admin/dashboard/happening/unpublished';
+  $handler->display->display_options['menu']['type'] = 'tab';
   $handler->display->display_options['menu']['title'] = 'Upubliceret indhold';
   $handler->display->display_options['menu']['weight'] = '0';
+  $handler->display->display_options['menu']['name'] = 'management';
   $handler->display->display_options['menu']['context'] = 0;
   $handler->display->display_options['menu']['context_only_inline'] = 0;
   $handler->display->display_options['tab_options']['title'] = 'Upubliceret';
@@ -371,11 +372,11 @@ function vih_dashboard_views_default_views() {
     t('Titel'),
     t('Type'),
     t('Forfatter uid'),
-    t('Udgivet'),
     t('Udgiv den'),
     t('Ikke planlagt'),
     t('Content pane'),
     t('Du har indhold, der ikke er udgivet'),
+    t('Udgivet'),
     t('Alle'),
     t('VIH Admin'),
     t('Content pane 2'),

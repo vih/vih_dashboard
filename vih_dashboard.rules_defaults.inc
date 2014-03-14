@@ -12,6 +12,7 @@ function vih_dashboard_default_rules_configuration() {
   $items['rules_30_days_after_last_login'] = entity_import('rules_config', '{ "rules_30_days_after_last_login" : {
       "LABEL" : "30 days after last login",
       "PLUGIN" : "reaction rule",
+      "OWNER" : "rules",
       "TAGS" : [ "user" ],
       "REQUIRES" : [ "rules", "rules_scheduler" ],
       "ON" : { "user_login" : [] },
@@ -32,6 +33,7 @@ function vih_dashboard_default_rules_configuration() {
   $items['rules_goto_workbench_after_login'] = entity_import('rules_config', '{ "rules_goto_workbench_after_login" : {
       "LABEL" : "Goto dashboard after login",
       "PLUGIN" : "reaction rule",
+      "OWNER" : "rules",
       "TAGS" : [ "user" ],
       "REQUIRES" : [ "rules" ],
       "ON" : { "user_login" : [] },
@@ -49,6 +51,7 @@ function vih_dashboard_default_rules_configuration() {
   $items['rules_send_reminder_email'] = entity_import('rules_config', '{ "rules_send_reminder_email" : {
       "LABEL" : "Send reminder email",
       "PLUGIN" : "action set",
+      "OWNER" : "rules",
       "TAGS" : [ "user" ],
       "REQUIRES" : [ "rules", "rules_scheduler" ],
       "USES VARIABLES" : { "account" : { "label" : "Account", "type" : "user" } },
