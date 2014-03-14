@@ -1,0 +1,22 @@
+<?php
+/**
+ * @file
+ */
+
+/**
+ * Remove obsolete pages.
+ */
+function vih_dashboard_update_7000() {
+  module_load_include('inc', 'page_manager', 'plugins/tasks/page');
+  $pages = array(
+    'add_story_redirect', // Check for unique page names in admin/structure/pages.
+    'diverse',
+    '',
+  );
+  foreach ($pages as $name) {
+    $page = page_manager_page_load($name);
+    if (!empty($page)) {
+      page_manager_page_delete($page);
+    }
+  }
+}
