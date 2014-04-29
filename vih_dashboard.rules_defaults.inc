@@ -30,24 +30,6 @@ function vih_dashboard_default_rules_configuration() {
       ]
     }
   }');
-  $items['rules_goto_workbench_after_login'] = entity_import('rules_config', '{ "rules_goto_workbench_after_login" : {
-      "LABEL" : "Goto dashboard after login",
-      "PLUGIN" : "reaction rule",
-      "OWNER" : "rules",
-      "TAGS" : [ "user" ],
-      "REQUIRES" : [ "rules" ],
-      "ON" : { "user_login" : [] },
-      "IF" : [
-        { "user_has_role" : {
-            "account" : [ "account" ],
-            "roles" : { "value" : { "3" : "3", "5" : "5", "6" : "6", "7" : "7" } },
-            "operation" : "OR"
-          }
-        }
-      ],
-      "DO" : [ { "redirect" : { "url" : "admin\\/dashboard" } } ]
-    }
-  }');
   $items['rules_send_reminder_email'] = entity_import('rules_config', '{ "rules_send_reminder_email" : {
       "LABEL" : "Send reminder email",
       "PLUGIN" : "action set",

@@ -33,7 +33,6 @@ features[page_manager_pages][] = people
 features[page_manager_pages][] = short_courses
 features[page_manager_pages][] = tilmeldinger
 features[rules_config][] = rules_30_days_after_last_login
-features[rules_config][] = rules_goto_workbench_after_login
 features[rules_config][] = rules_send_reminder_email
 features[views_view][] = vih_stale_content
 features[views_view][] = vih_unpublished_content
