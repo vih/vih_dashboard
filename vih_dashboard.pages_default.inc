@@ -33,6 +33,8 @@ function vih_dashboard_default_page_manager_pages() {
       ),
     ),
     'logic' => 'and',
+    'type' => 'none',
+    'settings' => NULL,
   );
   $page->menu = array(
     'type' => 'default tab',
@@ -248,6 +250,8 @@ function vih_dashboard_default_page_manager_pages() {
       ),
     ),
     'logic' => 'and',
+    'type' => 'none',
+    'settings' => NULL,
   );
   $page->menu = array(
     'type' => 'tab',
@@ -447,6 +451,8 @@ function vih_dashboard_default_page_manager_pages() {
       ),
     ),
     'logic' => 'and',
+    'type' => 'none',
+    'settings' => NULL,
   );
   $page->menu = array(
     'type' => 'tab',
@@ -624,6 +630,8 @@ function vih_dashboard_default_page_manager_pages() {
       ),
     ),
     'logic' => 'and',
+    'type' => 'none',
+    'settings' => NULL,
   );
   $page->menu = array(
     'type' => 'tab',
@@ -812,23 +820,6 @@ function vih_dashboard_default_page_manager_pages() {
     $display->content['new-56e52e34-a3be-4705-97b5-06c140bf2b72'] = $pane;
     $display->panels['left'][0] = 'new-56e52e34-a3be-4705-97b5-06c140bf2b72';
     $pane = new stdClass();
-    $pane->pid = 'new-3f1b6a5a-4eae-46b7-b688-cd0f6e20ca59';
-    $pane->panel = 'left';
-    $pane->type = 'views_panes';
-    $pane->subtype = 'vih_short_course_sportcamp_subjects-panel_pane_1';
-    $pane->shown = TRUE;
-    $pane->access = array();
-    $pane->configuration = array();
-    $pane->cache = array();
-    $pane->style = array();
-    $pane->css = array();
-    $pane->extras = array();
-    $pane->position = 1;
-    $pane->locks = array();
-    $pane->uuid = '3f1b6a5a-4eae-46b7-b688-cd0f6e20ca59';
-    $display->content['new-3f1b6a5a-4eae-46b7-b688-cd0f6e20ca59'] = $pane;
-    $display->panels['left'][1] = 'new-3f1b6a5a-4eae-46b7-b688-cd0f6e20ca59';
-    $pane = new stdClass();
     $pane->pid = 'new-14e00692-0ea8-44b8-b56b-8a65aec1ec04';
     $pane->panel = 'right';
     $pane->type = 'views_panes';
@@ -910,6 +901,8 @@ function vih_dashboard_default_page_manager_pages() {
       ),
     ),
     'logic' => 'and',
+    'type' => 'none',
+    'settings' => NULL,
   );
   $page->menu = array(
     'type' => 'tab',
