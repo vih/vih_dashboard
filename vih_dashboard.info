@@ -36,4 +36,3 @@ features[rules_config][] = rules_30_days_after_last_login
 features[rules_config][] = rules_send_reminder_email
 features[views_view][] = vih_stale_content
 features[views_view][] = vih_unpublished_content
-features[views_view][] = webforms
